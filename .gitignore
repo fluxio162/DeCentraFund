@@ -1,3 +1,13 @@
-dependencies/*
+# Ignore dependency folder except placeholder
+dependencies/
 !dependencies/.gitkeep
-cache
+
+# Foundry build outputs
+out/
+cache/
+
+# Node.js dependencies
+node_modules/
+
+# Build outputs
+**/dist/
