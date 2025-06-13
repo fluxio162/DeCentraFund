@@ -27,3 +27,22 @@ jobs:
 
       - name: ✅ Run tests with logs
         run: forge test -vvv
+
+      - name: ⚙️ Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: frontend/de-centra-fund/package-lock.json
+
+      - name: 📥 Install frontend dependencies
+        working-directory: frontend/de-centra-fund
+        run: npm ci
+
+      - name: 🔧 Build frontend
+        working-directory: frontend/de-centra-fund
+        run: npm run build
+
+      - name: 🚦 Start frontend (smoke test)
+        working-directory: frontend/de-centra-fund
+        run: timeout 10 npm start
