@@ -10,7 +10,7 @@
 - Secure, transparent fund pledging and withdrawal
 - Automatic refund mechanism if campaign goal is not met
 - On-chain campaign registry via a factory contract
-- Clean and responsive React/Next.js frontend
+- Clean and responsive Angular frontend
 - MetaMask & WalletConnect integration for seamless Web3 access
 
 ---
@@ -18,7 +18,7 @@
 ## 🧱 Architecture
 
 ### 🖥️ Frontend (Off-chain)
-- **Built with:** React + Next.js
+- **Built with:** Angular
 - **Main Components:**
   - Campaign creation form
   - Campaign detail view (progress, pledgers, status)
@@ -54,4 +54,23 @@ To build and run the tests execute:
 forge build
 forge test -vvv
 ```
+
+## Frontend setup
+
+The Angular app lives in `frontend/de-centra-fund`.
+
+Install dependencies:
+
+```bash
+cd frontend/de-centra-fund
+npm install
+```
+
+To start a local dev server run:
+
+```bash
+npm start
+```
+
+This starts the app at [http://localhost:4200](http://localhost:4200). To build the production bundle use `npm run build`.
 
