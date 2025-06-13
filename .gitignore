@@ -9,5 +9,8 @@ cache/
 # Node.js dependencies
 node_modules/
 
+# Editor settings
+.vscode/
+
 # Build outputs
 **/dist/
