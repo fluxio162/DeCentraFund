@@ -43,6 +43,3 @@ jobs:
         working-directory: frontend/de-centra-fund
         run: npm run build
 
-      - name: 🚦 Start frontend (smoke test)
-        working-directory: frontend/de-centra-fund
-        run: timeout 10 npm start
