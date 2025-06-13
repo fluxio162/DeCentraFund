@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles for DeCentraFund */
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: #f3f3f3;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  text-align: center;
+  max-width: 600px;
+}
