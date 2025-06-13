@@ -1,0 +1,22 @@
+[profile.default]
+src = "src"
+test = "test"
+script = 'script'
+out = "out"
+libs = ["dependencies"]
+
+solc = "0.8.28"
+evm_version = "cancun"
+
+[rpc_endpoints]
+dev = "ws://localhost:8545"
+lva = "https://geth.sc.logic.at"
+
+[soldeer]
+remappings_generate = true
+remappings_version = false
+
+[dependencies]
+forge-std = "1.9.6"
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

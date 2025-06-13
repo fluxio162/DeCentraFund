@@ -1,0 +1,29 @@
+name: Foundry CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Checkout repository
+        uses: actions/checkout@v3
+
+      - name: 🛠 Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+
+      - name: 📦 Install dependencies (Soldeer)
+        run: forge soldeer install
+
+      - name: 🔨 Build contracts
+        run: forge build
+
+      - name: ✅ Run tests with logs
+        run: forge test -vvv
